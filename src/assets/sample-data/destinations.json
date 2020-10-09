@@ -1,0 +1,16 @@
+{
+  "destinations": [
+    {
+      "image": "https://picsum.photos/id/1001/500/300",
+      "name": "Tristán Narvaja ",
+      "location": "Rocha, UY",
+      "description": "Every Sunday from early morning until three in the afternoon enjoy the biggest market in Montevideo."
+    },
+    {
+      "image": "https://picsum.photos/id/1015/500/300",
+      "name": "Rambla Montevideo",
+      "location": "Montevideo, UY",
+      "description": "22 kilometers long avenue along the coast of Rio de la Plata stretching throughout all of Montevideo."
+    }
+  ]
+}

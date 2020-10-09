@@ -1,0 +1,20 @@
+.user-image {
+  app-image-shell {
+    --image-shell-border-radius: 50%;
+    --image-shell-loading-background: #e1ecff;
+  }
+}
+
+.user-email {
+  app-text-shell {
+    --text-shell-line-color: #e1ecff;
+  }
+}
+
+.user-name {
+  app-text-shell {
+    --font-size: 17px;
+    --text-shell-line-height: calc(var(--font-size) * 1.2);
+    --text-shell-line-color: #d7e6ff;
+  }
+}

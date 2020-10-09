@@ -9,9 +9,27 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">List</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div>
+    <ion-list>
+      <ion-item *ngFor="let user of users">
+        <ion-avatar slot="start" class="user-image">
+          <app-aspect-ratio [ratio]="{w:1, h:1}">
+            <app-image-shell animation="spinner" [src]="user.avatar" [alt]=""></app-image-shell>
+          </app-aspect-ratio>
+        </ion-avatar>
+        <ion-label>
+          <h2 class="user-name">
+            <app-text-shell [data]="(user.first_name) ? user.first_name.concat(' ' + user.last_name) : null "></app-text-shell>
+          </h2>
+          <p class="user-email">
+            <app-text-shell [data]="user.email"></app-text-shell>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

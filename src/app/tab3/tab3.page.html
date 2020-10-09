@@ -9,9 +9,40 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Cards</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div>
+    <!-- <ion-card *ngFor="let destination of destinations">
+      <img [src]="destination.image">
+      <ion-card-header>
+        <ion-card-subtitle>Destination</ion-card-subtitle>
+        <ion-card-title>
+          {{destination.location}}
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{destination.description}}
+      </ion-card-content>
+    </ion-card> -->
+
+    <ion-card *ngFor="let destination of destinations">
+      <app-image-shell animation="gradient" [display]="'cover'" [src]="destination.image">
+        <app-aspect-ratio [ratio]="{w:2, h:1}">
+        </app-aspect-ratio>
+      </app-image-shell>
+      <ion-card-header>
+        <ion-card-subtitle>Destination</ion-card-subtitle>
+        <ion-card-title class="destination-title">
+          <app-text-shell animation="bouncing" [data]="destination.location"></app-text-shell>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <app-text-shell animation="bouncing" lines="3" [data]="destination.description"></app-text-shell>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
 </ion-content>

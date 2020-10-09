@@ -1,0 +1,22 @@
+.photos-section {
+  margin: 16px 10px;
+
+  .photos-row {
+    --ion-grid-columns: 4;
+    --ion-grid-column-padding: 0px;
+
+    .photo-item {
+      --col-item-width: 2;
+      flex: 0 0 calc(calc(var(--col-item-width) / var(--ion-grid-columns, 12)) * 100%);
+      width: calc(calc(var(--col-item-width) / var(--ion-grid-columns, 12)) * 100%);
+      max-width: calc(calc(var(--col-item-width) / var(--ion-grid-columns, 12)) * 100%);
+
+      padding: 0px 6px 12px;
+    }
+
+    app-image-shell {
+      --image-shell-border-radius: 10px;
+      --image-shell-loading-background: #e1ecff;
+    }
+  }
+}
