@@ -1,7 +1,6 @@
 import { ShellModel } from '../shell/data-store';
 
 export class UserItemModel {
-  id: string;
   email: string;
   first_name: string;
   last_name: string;
